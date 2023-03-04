@@ -77,8 +77,8 @@ int main(){
     float vectorf_gran[n];
 
     for(int i = 0; i < n; i++){
-        vector_gran[i] = 10000.+i;
-        vectorf_gran[i] = 10000.+i;
+        vector_gran[i] = 100000.+i;
+        vectorf_gran[i] = 100000.+i;
     }
     printf("La varianza muestral en precisión doble con el 1er vector grande es = %.16G\n", varianza_muestral(vector_gran, n));
     printf("La varianza muestral en precisión simple con el 1er vector grande es = %.8G\n", varianza_muestral_simple(vectorf_gran, n));
@@ -90,8 +90,8 @@ int main(){
     float vectorf_gran_2[n];
 
     for(int j = 0; j < n; j++){
-        vector_gran_2[j] = 10000.+j;
-        vectorf_gran_2[j] = 10000.+j;
+        vector_gran_2[j] = 100000.+j;
+        vectorf_gran_2[j] = 100000.+j;
     }
     printf("La varianza muestral en precisión doble con el 2o vector grande es = %.16G\n", varianza_muestral(vector_gran_2, n));
     printf("La varianza muestral en precisión simple con el 2o vector grande es = %.8G\n", varianza_muestral_simple(vectorf_gran_2, n));

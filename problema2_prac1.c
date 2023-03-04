@@ -16,8 +16,8 @@ void ecuacion_cuadratica(double ct[], double x[]){
 }
 
 void ecuacion_cuadratica_simple(float ct[], float x[]){
-    x[0] = (-ct[1] + sqrt(ct[1]*ct[1] - 4*ct[0]*ct[2])) / (2*ct[0]);
-    x[1] = (-ct[1] - sqrt(ct[1]*ct[1] - 4*ct[0]*ct[2])) / (2*ct[0]);
+    x[0] = (-ct[1] + sqrtf(ct[1]*ct[1] - 4*ct[0]*ct[2])) / (2*ct[0]);
+    x[1] = (-ct[1] - sqrtf(ct[1]*ct[1] - 4*ct[0]*ct[2])) / (2*ct[0]);
 }
 
 void ecuacion_cuadratica_alt(double ct[], double x[]){
@@ -33,12 +33,12 @@ void ecuacion_cuadratica_alt(double ct[], double x[]){
 
 void ecuacion_cuadratica_alt_simple(float ct[], float x[]){
     if(ct[1] < 0){
-        x[0] = (-ct[1] + sqrt(ct[1]*ct[1] - 4*ct[0]*ct[2])) / (2*ct[0]);
-        x[1] = (-2*ct[2]) / (ct[1] - sqrt(ct[1]*ct[1] - 4*ct[0]*ct[2]));
+        x[0] = (-ct[1] + sqrtf(ct[1]*ct[1] - 4*ct[0]*ct[2])) / (2*ct[0]);
+        x[1] = (-2*ct[2]) / (ct[1] - sqrtf(ct[1]*ct[1] - 4*ct[0]*ct[2]));
     }
     else {
-        x[0] = (-2*ct[2]) / (ct[1] + sqrt(ct[1]*ct[1] - 4*ct[0]*ct[2]));
-        x[1] = (-ct[1] - sqrt(ct[1]*ct[1] - 4*ct[0]*ct[2])) / (2*ct[0]);
+        x[0] = (-2*ct[2]) / (ct[1] + sqrtf(ct[1]*ct[1] - 4*ct[0]*ct[2]));
+        x[1] = (-ct[1] - sqrtf(ct[1]*ct[1] - 4*ct[0]*ct[2])) / (2*ct[0]);
     }
 }
 
