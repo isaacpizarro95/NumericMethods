@@ -85,12 +85,39 @@ int main(){
     }
 
     // Precisión doble
-    printf("La varianza muestral en precisión doble es = %.16G\n", varianza_muestral(vector, n));
+    printf("\nLa varianza muestral en precisión doble es = %.16G\n", varianza_muestral(vector, n));
     printf("La varianza muestral_2 en precisión doble es = %.16G\n", varianza_muestral_2(vector, n));
 
     // Precisión simple
     printf("La varianza muestral en precisión simple es = %.8G\n", varianza_muestral_simple(vectorf, n));
-    printf("La varianza muestral_2 en precisión simple es = %.8G\n", varianza_muestral_simple_2(vectorf, n));    
+    printf("La varianza muestral_2 en precisión simple es = %.8G\n\n\n", varianza_muestral_simple_2(vectorf, n));    
 
+
+    // Ejemplo con vectores con dimensión grande
+    n = 150;
+    double vector_gran[n];
+    float vectorf_gran[n];
+    double vector_gran_2[n+50];
+    float vectorf_gran_2[n+50];
+
+    for(int i = 0; i < n; i++){
+        if(i < 150){
+            vector_gran[i] = 100000.+i;
+            vectorf_gran[i] = 100000.+i;
+        }
+        vector_gran_2[i] = 100000.+i;
+        vectorf_gran_2[i] = 100000.+i;
+    }
+
+    printf("Ejemplo con vectores de dimensiones de 150 y 200:\n\n");
+    printf("La varianza muestral en precisión doble con el 1er vector grande es = %.16G\n", varianza_muestral(vector_gran, n));
+    printf("La varianza muestral en precisión simple con el 1er vector grande es = %.8G\n", varianza_muestral_simple(vectorf_gran, n));
+    printf("La varianza muestral_2 en precisión doble con el 1er vector grande es = %.16G\n", varianza_muestral_2(vector_gran, n));
+    printf("La varianza muestral_2 en precisión simple con el 1er vector grande es = %.8G\n\n", varianza_muestral_simple_2(vectorf_gran, n));
+    printf("La varianza muestral en precisión doble con el 2o vector grande es = %.16G\n", varianza_muestral(vector_gran_2, n));
+    printf("La varianza muestral en precisión simple con el 2o vector grande es = %.8G\n", varianza_muestral_simple(vectorf_gran_2, n));
+    printf("La varianza muestral_2 en precisión doble con el 2o vector grande es = %.16G\n", varianza_muestral_2(vector_gran_2, n));
+    printf("La varianza muestral_2 en precisión simple con el 2o vector grande es = %.8G\n", varianza_muestral_simple_2(vectorf_gran_2, n)); 
+    
     return 0;
 }
